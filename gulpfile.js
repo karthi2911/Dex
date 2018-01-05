@@ -6,26 +6,26 @@ var reload      = browserSync.reload;
 
 /* Task to compile less */
 gulp.task('compile-less', function() {  
-  gulp.src('./less/style.less')
+  gulp.src('./asset/less/style.less')
     .pipe(sourcemaps.init())  
     .pipe(less())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./mainfile/css/'));
+    .pipe(gulp.dest('./asset/css/'));
 }); 
 /* Task to watch less changes */
 gulp.task('watch-less', function() {  
-  gulp.watch('./less/**/*.less' , ['compile-less']);
+  gulp.watch('./asset/less/**/*.less' , ['compile-less']);
 });
  
 gulp.task('serve', function () {
     // Serve files from the root of this project
     browserSync.init({
         server: {
-            baseDir: "./mainfile/"
+            baseDir: "./"
         }
     }); 
-    gulp.watch("./less/*.less").on("change", reload);
-    gulp.watch("./mainfile/*.html").on("change", reload);
+    gulp.watch("./asset/less/*.less").on("change", reload);
+    gulp.watch("./*.html").on("change", reload);
 });
  
 /* Task when running `gulp` from terminal */
