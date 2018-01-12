@@ -17,6 +17,7 @@
 <body>
 
 <main class="wrapper">
+    <!-- Banner -->
     <section class="banner">
         <div class="container">
             <header>
@@ -71,10 +72,10 @@
         </div>
     </section>
 
+    <!-- Lonely Ginger -->
     <section class="lonelyGingerBG heightFixed">
         <div class="container flex-container">
             <div class="gingerImage">
-
             </div>
             <div class="lonelyGingerContent">
                 <h2>One Lonely Ginger</h2>
@@ -89,6 +90,7 @@
         </div>
     </section>
 
+    <!-- Fighting Power -->
     <section class="fightingPowerBG heightFixed">
         <div class="container flex-container">
             <div class="fightingPowerContent">
@@ -100,11 +102,11 @@
                 </div>
             </div>
             <div class="fightingImage">
-
             </div>
         </div>
     </section>
 
+    <!-- Callouts -->
     <section class="calloutsBG">
         <div class="container">
             <div class="callouts">
@@ -135,6 +137,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footerTop">
             <div class="container">
@@ -163,65 +166,10 @@
         </div>
     </footer>
 </main>
+
 <script src="asset/js/jquery.min.js" type="text/javascript"></script>
 <script src="asset/js/owl.carousel.js" type="text/javascript"></script>
-
-<script>
-$( document ).ready(function() {
-    
-    if($(window).width() < 992){
-        $('.callouts ul').addClass('owl-carousel owl-theme');
-    }
-    else {
-        $('.callouts ul').trigger('destroy.owl.carousel');
-        $('.callouts ul').removeClass('owl-carousel owl-theme');
-    }
-    $('.callouts .owl-carousel').owlCarousel({
-        loop:true,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
-            }
-        }
-    });
-    if($(window).width() >= 992) {
-        $('.lonelyGingerContent figure').appendTo('.gingerImage');
-        $('.fightingPowerContent figure').appendTo('.fightingImage');
-    }
-    else {
-        $( '.lonelyGingerContent figure' ).next( ".lonelyGingerContent h1" );
-        $( '.fightingPowerContent figure' ).next( ".fightingPowerContent h1" );
-    }
-
-    $(window).resize(function() {
-        if($(window).width() < 992){
-            $('.callouts ul').addClass('owl-carousel owl-theme');
-        }
-        else {
-            $('.callouts ul').trigger('destroy.owl.carousel');
-            $('.callouts ul').removeClass('owl-carousel owl-theme');
-        }
-        $('.callouts .owl-carousel').owlCarousel({
-            loop:true,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                }
-            }
-        });
-        if($(window).width() >= 992) {
-            $('.lonelyGingerContent figure').appendTo('.gingerImage');
-            $('.fightingPowerContent figure').appendTo('.fightingImage');
-        }
-        else {
-            $('.lonelyGingerContent figure').next(".lonelyGingerContent h1");
-            $('.fightingPowerContent figure').next(".fightingPowerContent h1");
-        }
-    });
-});
-</script>
+<script src="asset/js/app.js" type="text/javascript"></script>
 
 </body>
 </html>
