@@ -113,6 +113,9 @@ body {
 		height: 100%;
 		min-height: inherit;
 	}
+	@media @orientation {
+		min-height: 620px;
+	}
 	header {
 		padding-top: 15px;
 		.logo {
@@ -162,6 +165,9 @@ body {
 			}
 			img {
 				width: 100%;
+				@media @orientation {
+					width: 80%;
+				}
 			}
 			@media @xSmall {
 				width: 31%;
@@ -214,6 +220,9 @@ body {
 			@media @large {
 				padding: 0;
 				font-size: 2.6rem;
+			}
+			@media @orientation {
+				font-size: 2.2rem;
 			}
 			@media @xLarge {
 				font-size: 3.1rem;
@@ -653,9 +662,12 @@ body {
 	}*/
 	@media @large {
 		min-height: inherit;
-		padding: 80px 0;
+		padding: 40px 0;
 		height: 100%;
 		display: block;
+	}
+	@media @orientation {
+		height: auto;
 	}
 	.container {
 		height: 100%;
@@ -884,6 +896,9 @@ body {
 				@media @large {
 					padding-left: 5.5rem;
 				}
+				@media @orientation {
+					padding-left: 4.5rem;
+				}
 				@media @xLarge {
 					padding-left: 8.2rem;
 				}
@@ -976,6 +991,9 @@ body {
 			}
 			@media @large {
 				font-size: 2rem;
+			}
+			@media @orientation {
+				font-size: 1.3rem;
 			}
 		}
 		i {
