@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    if($(window).width() < 992){
+    if($(window).width() < 812){
         $('.callouts ul').addClass('owl-carousel owl-theme');
     }
     else {
@@ -15,7 +15,7 @@ $( document ).ready(function() {
             }
         }
     });
-    if($(window).width() >= 992) {
+    if($(window).width() >= 812) {
         $('.lonelyGingerContent figure').appendTo('.gingerImage');
         $('.fightingPowerContent figure').appendTo('.fightingImage');
     }
@@ -25,7 +25,7 @@ $( document ).ready(function() {
     }
 
     $(window).resize(function() {
-        if($(window).width() < 992){
+        if($(window).width() < 812){
             $('.callouts ul').addClass('owl-carousel owl-theme');
         }
         else {
@@ -41,7 +41,7 @@ $( document ).ready(function() {
                 }
             }
         });
-        if($(window).width() >= 992) {
+        if($(window).width() >= 812) {
             $('.lonelyGingerContent figure').appendTo('.gingerImage');
             $('.fightingPowerContent figure').appendTo('.fightingImage');
         }
